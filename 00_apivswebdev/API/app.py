@@ -1,15 +1,16 @@
 from flask import Flask
-from flask import render_template
+from flask_cors import CORS
+from flask import jsonify
 
 app = Flask(__name__)
-
-data = "Hello World"
+CORS(app)
 
 
 @app.route("/")
 def hello_world():
-    return render_template("index.html", data=data)
+    return jsonify({"text": "Hello World"})
 
 
 if __name__ == "__main__":
     app.run(debug=True)
+
