@@ -3,6 +3,9 @@ from flask_cors import CORS
 from flask import jsonify
 
 app = Flask(__name__)
+
+print(__name__)
+
 CORS(app)
 
 
