@@ -1,0 +1,8 @@
+1. create database test;
+2. create user testuser with password 'test';
+3. grant all privileges on database test to testuser;
+4. \connect test
+5. drop database test;
+6. pg_dump -U testuser -d test > /path/test.sql
+7. psql -U markus2 -d test
+8. psql databasename < data_base_dump

@@ -4,13 +4,14 @@ from flask import jsonify
 
 app = Flask(__name__)
 
-
 CORS(app)
+
+data = "Hello World"
 
 
 @app.route("/")
 def hello_world():
-    return jsonify({"text": "Hello World"})
+    return jsonify({"text": data})
 
 
 if __name__ == "__main__":
